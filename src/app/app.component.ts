@@ -45,9 +45,9 @@ export class AppComponent implements OnInit {
     );
   }
 
-  //search user for id
-  searchUser(idUser) {
-    this.userService.searchUser(idUser).subscribe(
+  //delete user for id
+  deleteUser(idUser) {
+    this.userService.deleteUser(idUser).subscribe(
       data => {
         if (data['results'] == 'OK') {
           alert(data['message']),

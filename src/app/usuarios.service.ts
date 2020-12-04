@@ -17,15 +17,14 @@ export class UsuariosService {
     return this.http.get(`${this.URL}GetUsers.php`);
   }
 
-
   //update user
   updateUser(user) {
-    return this.http.post(`${this.URL}UpdateUser.php`, JSON.stringify(usuario));
+    return this.http.post(`${this.URL}UpdateUser.php`, JSON.stringify(user));
   }
 
-  //search user for idUser
-  searchUser(idUser: number) {
-    return this.http.get(`${this.URL}searchUser.php?idUser=${idUser}`);
+  //delete user for idUser
+  deleteUser(idUser: number) {
+    return this.http.get(`${this.URL}deleteUser.php?idUser=${idUser}`);
   }
 
   //select user
